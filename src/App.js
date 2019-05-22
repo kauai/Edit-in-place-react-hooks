@@ -1,5 +1,5 @@
 import React, { Component,useState } from 'react';
-import EditInPlace from './EditInPlace'
+import EditInPlace,{ TextArea } from './EditInPlace'
 
 function App(){
   const [name,setName] = useState('Thiago')
@@ -7,8 +7,9 @@ function App(){
     return (
       <div className="App">
         <header className="App-header">
-             <EditInPlace value={name} onChangeValue={setName}/>
-             <EditInPlace value={lastName} onChangeValue={lastSetName}/>
+             <EditInPlace viewAs="h1" value={name} onChangeValue={setName}/>
+             <EditInPlace viewAs="pre" value={lastName} onChangeValue={lastSetName}/>
+             <TextArea viewAs="pre" value={lastName} onChangeValue={lastSetName}/>
         </header>
       </div>
     )
